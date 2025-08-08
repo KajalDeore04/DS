@@ -6,7 +6,9 @@ import os
 # load
 model_path = os.path.join(os.path.dirname(__file__), 'KNN_heart.pkl')
 model = joblib.load(model_path)
+scaler_path = os.path.join(os.path.dirname(__file__), 'scaler.pkl')
 scaler = joblib.load('scaler.pkl')
+columns_path = os.path.join(os.path.dirname(__file__), 'columns.pkl')
 expected_columns = joblib.load('columns.pkl')
 
 st.title("Heart Stroke Prediction🥂")
