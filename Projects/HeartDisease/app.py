@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os 
 
 # load
-model = joblib.load('KNN_heart.pkl')
+model_path = os.path.join(os.path.dirname(__file__), 'KNN_heart.pkl')
+model = joblib.load(model_path)
 scaler = joblib.load('scaler.pkl')
 expected_columns = joblib.load('columns.pkl')
 
